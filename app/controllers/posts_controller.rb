@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   # GET /posts
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    @posts = policy_scope(Post)
   end
 
   # GET /posts/1
@@ -49,6 +50,7 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+      authorize @post
     end
 
     # Only allow a list of trusted parameters through.
