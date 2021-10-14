@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<h1 class="title">
   <strong>Title:</strong>
   <%= @post.title %>
-</p>
+</h1>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
 
 <p>
   <strong>Date:</strong>
@@ -16,12 +10,13 @@
 </p>
 
 
+<%= @post.rich_content %>
 <p>
   <strong>Views:</strong>
   <%= @post.views %>
 </p>
 
-<%= image_tag(@post.image, title: @post.image.filename) if @post.image.present? %>
+<%# <%= image_tag(@post.images, title: @post.images.filename) if @post.image.present? %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

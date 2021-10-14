@@ -35,7 +35,7 @@ gem 'pundit'
 # dropbox active storage
 gem 'activestorage-dropbox'    # adapter for dropbox
 gem 'dropbox_api'              # required for `activestorage-dropbox`
-
+gem 'faker'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
