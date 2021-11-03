@@ -9,14 +9,13 @@
   <%= @post.date %>
 </p>
 
-
-<%= @post.rich_content %>
+<%= image_tag(@post.photo, title: @post.photo.filename) if @post.photo.present%>
 <p>
   <strong>Views:</strong>
   <%= @post.views %>
 </p>
 
-<%# <%= image_tag(@post.images, title: @post.images.filename) if @post.image.present? %>
+
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
