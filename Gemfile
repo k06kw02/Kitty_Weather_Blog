@@ -27,6 +27,7 @@ gem 'redis', '~> 4.0'
 gem "google-cloud-storage", "~> 1.8", require: false
 
 gem 'ckeditor', github: 'galetahub/ckeditor'
+gem "mini_magick"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
