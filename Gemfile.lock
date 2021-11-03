@@ -179,6 +179,7 @@ GEM
     marcel (1.0.2)
     memoist (0.16.2)
     method_source (1.0.0)
+    mini_magick (4.11.0)
     mini_mime (1.1.1)
     minitest (5.14.4)
     msgpack (1.4.2)
@@ -332,6 +333,7 @@ DEPENDENCIES
   font-awesome-sass
   google-cloud-storage (~> 1.8)
   listen (~> 3.3)
+  mini_magick
   mysql2 (~> 0.5)
   pry-byebug
   pry-rails
