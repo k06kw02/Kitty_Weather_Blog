@@ -28,8 +28,11 @@ gem "google-cloud-storage", "~> 1.8", require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# Authorisation and Authentication
 gem 'devise'
 gem 'pundit'
+
+gem 'faker'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'

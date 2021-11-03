@@ -24,12 +24,14 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     if @post.save
       redirect_to @post, notice: 'Post was successfully created.'
     else
       render :new
     end
+    authorize @post
   end
 
   # PATCH/PUT /posts/1
@@ -48,14 +50,13 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-      authorize @post
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:content, :title, :date, :views, photos:[])
-    end
+  def set_post
+    @post = Post.find(params[:id])
+    authorize @post
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :date, photos: [])
+  end
 end

@@ -1,21 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
+<h1 class="title">
   <strong>Title:</strong>
   <%= @post.title %>
-</p>
+</h1>
+
 
 <p>
   <strong>Date:</strong>
   <%= @post.date %>
 </p>
 
-
+<%= image_tag(@post.photo, title: @post.photo.filename) if @post.photo.present%>
 <p>
   <strong>Views:</strong>
   <%= @post.views %>
