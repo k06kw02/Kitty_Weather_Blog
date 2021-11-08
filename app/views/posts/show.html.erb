@@ -9,7 +9,7 @@
   <%= @post.date %>
 </p>
 
-<%= image_tag(@post.photo, title: @post.photo.filename) if @post.photo.present%>
+<%= image_tag(@post.photo, title: @post.photo.filename)%>
 <p>
   <strong>Views:</strong>
   <%= @post.views %>
