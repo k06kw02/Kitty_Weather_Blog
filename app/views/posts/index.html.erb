@@ -5,15 +5,14 @@
     <% @posts.each do |post| %>
 
         <%= link_to post.title, post %>
+        <%# look up display for gcs %>
+        <%# <%= image_tag(@post.photo, title: @post.photo.filename)%> %>
         <p class="content"><%= post.content %></p>
-        <%# <p class="views"><%= post.views %></p>
+        <%# <%<p class="views"><%= post.views %></p>
         <p class="date"><%= post.date %></p>
-        <%# <td><%=  'Show', post %>
 
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%# <%= link_to 'New Post', post/new  %>
