@@ -25,9 +25,10 @@ puts "creating posts..."
 10.times do
   post = Post.new(
     title: Faker::Hobby.activity,
-    rich_content: Faker::Lorem.paragraph(sentence_count: 6),
+    content: Faker::Lorem.paragraph(sentence_count: 6),
     date: Faker::Time.backward(days: 360, period: :morning, format: :long),
-    user: admin
+    user: admin,
+    blurb: Faker::Fantasy::Tolkien.poem
   )
   post.save!
 end

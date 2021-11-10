@@ -3,12 +3,13 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.input :blurb %>
     <%= f.input :date %>
     <%= f.input :photo, as: :file %>
   </div>
 
    <div class="form-inputs">
-    <%= f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+    <%= f.rich_text_area :content %>
   </div>
 
   <% if post.errors.any? %>
